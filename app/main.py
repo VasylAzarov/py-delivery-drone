@@ -4,7 +4,11 @@ class Cargo:
 
 
 class BaseRobot:
-    def __init__(self, name: str, weight: int, coord: list[int] = None) -> None:
+    def __init__(
+            self,
+            name: str,
+            weight: int,
+            coord: list[int] = None) -> None:
         self.name = name
         self.weight = weight
         self.coord = coord if coord is not None else [0, 0]
@@ -26,7 +30,11 @@ class BaseRobot:
 
 
 class FlyingRobot(BaseRobot):
-    def __init__(self, name: str, weight: int, coord: list[int] = None) -> None:
+    def __init__(
+            self,
+            name: str,
+            weight: int,
+            coord: list[int] = None) -> None:
         if coord is None:
             coord = [0, 0, 0]
         super().__init__(name, weight, coord[:2])
